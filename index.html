@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fantacy Cricket Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Ask for team name and toss button -->
+    <div class="teamName">
+      <div>
+        <strong>Team Name of Player 1 :</strong>
+        <input
+          type="text"
+          name="team1Name"
+          id="team1Name"
+          value=""
+          placeholder="Enter Team Name"
+        />
+      </div>
+      <input type="button" value="Toss" id="toss" />
+      <div>
+        <strong>Team Name of Player 2 :</strong>
+        <input
+          type="text"
+          name="team2Name"
+          id="team2Name"
+          value=""
+          placeholder="Enter Team Name"
+        />
+      </div>
+    </div>
+    <!-- winner name  -->
+    <div class="winnerName">
+      <h2></h2>
+    </div>
+    <hr />
+    <!-- congratulate to winner and show players list with team selection  -->
+    <div class="turn-info">
+      <!-- This will dynamically display whose turn it is -->
+    </div>
+    <div class="textAreas">
+      <div class="team1">
+        <h3>Player 1 Team</h3>
+        <div id="avalDiv">
+          <ul id="team1-players">
+            <!-- Players will be dynamically added here -->
+          </ul>
+        </div>
+        <div class="captain-selection">
+          <label for="team1-captain">Select Captain:</label>
+          <select id="team1-captain">
+            <option value="">Choose Captain</option>
+            <!-- Players will be added here as options -->
+          </select>
+        </div>
+        <div class="vice-captain-selection">
+          <label for="team1-vice-captain">Select Vice-Captain:</label>
+          <select id="team1-vice-captain">
+            <option value="">Choose Vice-Captain</option>
+            <!-- Players will be added here as options -->
+          </select>
+        </div>
+        <div class="display-credit">
+          <h3></h3>
+        </div>
+      </div>
+      <div class="available-container">
+        <h3>Available Players</h3>
+        <div id="avalDiv">
+          <ul id="available-players">
+            <!-- Players will be dynamically added here -->
+          </ul>
+        </div>
+        <div class="add-team-container">
+          <button id="add-team-btn">Add Team</button>
+        </div>
+      </div>
+      <div class="team2">
+        <h3>Player 2 Team</h3>
+        <div id="avalDiv">
+          <ul id="team2-players">
+            <!-- Players will be dynamically added here -->
+          </ul>
+        </div>
+        <div class="captain-selection">
+          <label for="team2-captain">Select Captain:</label>
+          <select id="team2-captain">
+            <option value="">Choose Captain</option>
+            <!-- Players will be added here as options -->
+          </select>
+        </div>
+        <div class="vice-captain-selection">
+          <label for="team2-vice-captain">Select Vice-Captain:</label>
+          <select id="team2-vice-captain">
+            <option value="">Choose Vice-Captain</option>
+            <!-- Players will be added here as options -->
+          </select>
+        </div>
+        <div class="display-credit">
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="hit-button-section">
+      <button id="startMatch">Start Match</button>
+    </div>
+    <div class="container" id="container">
+      <!-- Match Arena -->
+      <h1 class="matchHeading">Match Arena</h1>
+      <div class="textAreas">
+        <!-- Team 1 Player List -->
+        <div class="team1match team-players">
+          <h3>Team 1 Players</h3>
+          <div>
+            <ul id="team1-player">
+              <!-- Players will be dynamically added here -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Match Details (current batsman, bowler, over, ball, ball-by-ball log) -->
+        <div class="matchDetails match-details">
+          <h2>Match Score Board</h2>
+          <div class="player-details">
+            <div>
+              <h3>Current Batsman</h3>
+              <div class="current-player">
+                <strong>Name : </strong>
+                <span id="current-batsman-name">Batsman</span><br />
+                <strong>Runs : </strong> <span id="current-batsman-runs">0</span
+                ><br />
+                <strong>Fantasy Points : </strong>
+                <span id="current-batsman-points">0</span>
+              </div>
+            </div>
+            <div>
+              <h3>Current Bowler</h3>
+              <div class="current-player">
+                <strong>Name : </strong>
+                <span id="current-bowler-name">Bowler</span><br />
+                <strong>Fantasy Points : </strong>
+                <span id="current-bowler-points">0</span>
+              </div>
+            </div>
+          </div>
+          <div class="over-ball">
+            <strong>Over : </strong>
+            <span id="current-over"> 0 </span>.<span id="current-ball">0</span>
+          </div>
+          <!-- HIT Button Section -->
+          <div class="hit-button-section">
+            <button id="hitButton">HIT</button>
+          </div>
+          <div class="ball-log">
+            <h3>Ball Details</h3>
+            <ul id="ball-log">
+              <!-- New entries will be dynamically added here -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Team 2 Player List -->
+        <div class="team2match team-players">
+          <h3>Team 2 Players</h3>
+          <div>
+            <ul id="team2-player">
+              <!-- Players will be dynamically added here -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="hit-button-section">
+      <button id="resultButton">SHOW RESULT</button>
+    </div>
+
+    <div class="container-show-result">
+      <h1>Match Summary</h1>
+      <div class="match-info">
+        <p><strong>Toss Winner:</strong> <span id="toss-winner"></span></p>
+        <p><strong>Match Winner:</strong> <span id="match-winner"></span></p>
+      </div>
+      <div class="team-section">
+        <div class="team" id="team1">
+          <h2>Team 1 : <span id="team1-name"></span></h2>
+          <p><strong>Total Runs :</strong> <span id="team1-runs"></span></p>
+          <p>
+            <strong>Fantasy Points :</strong> <span id="team1-fanpoints"></span>
+          </p>
+          <p><strong>Wickets :</strong> <span id="team1-wickets"></span></p>
+          <table>
+            <thead>
+              <tr>
+                <th>Player Name</th>
+                <th>Role</th>
+                <th>Runs</th>
+                <th>Balls Played</th>
+                <th>Fantasy Points</th>
+              </tr>
+            </thead>
+            <tbody id="team1-players-res"></tbody>
+          </table>
+        </div>
+        <div class="team" id="team2">
+          <h2>Team 2 : <span id="team2-name"></span></h2>
+          <p><strong>Total Runs :</strong> <span id="team2-runs"></span></p>
+          <p>
+            <strong>Fantasy Points :</strong> <span id="team2-fanpoints"></span>
+          </p>
+          <p><strong>Wickets :</strong> <span id="team2-wickets"></span></p>
+          <table>
+            <thead>
+              <tr>
+                <th>Player Name</th>
+                <th>Role</th>
+                <th>Runs</th>
+                <th>Balls Played</th>
+                <th>Fantasy Points</th>
+              </tr>
+            </thead>
+            <tbody id="team2-players-res"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Importing index.js as a module -->
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
