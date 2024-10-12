@@ -1,4 +1,4 @@
-# Fantasy Cricket Game
+# Fantasy Cricket Game [Click Here](https://fantacy-cricket.vercel.app/)
 
 This project is a web-based Fantasy Cricket game between two players. Each player selects a team of 11 players within a 100-credit cap, follows the team selection rules, and simulates a match between the teams. The game calculates fantasy points based on player performance and determines the winner.
 
@@ -96,7 +96,7 @@ This project is a web-based Fantasy Cricket game between two players. Each playe
 
 1. Clone the repository.
    ```bash
-   git clone https://github.com/kishan2930/fantasy-cricket.git
+   git clone https://github.com/kishan2930/Fantacy-Cricket.git
    ```
 
 ## Credits
