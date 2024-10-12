@@ -44,7 +44,7 @@ This project is a web-based Fantasy Cricket game between two players. Each playe
 ### Fantasy Points System
 
 - **Batting Points**:
-  - Each Run: 1 point
+  - Each Run: Run point
   - Four: 5 points
   - Six: 8 points
   - Duck (dismissed for 0): -2 points
@@ -84,7 +84,6 @@ This project is a web-based Fantasy Cricket game between two players. Each playe
 - **HTML**: For structuring the web interface.
 - **CSS**: For styling and layout of the UI.
 - **JavaScript**: For match logic, team selection, and fantasy points calculation.
-- **Firebase**: (Optional) For storing player data or game results.
 
 ## Future Enhancements
 
@@ -98,6 +97,7 @@ This project is a web-based Fantasy Cricket game between two players. Each playe
    ```bash
    git clone https://github.com/kishan2930/Fantacy-Cricket.git
    ```
+2. Open `index.html` in a web browser to start the game.
 
 ## Credits
 
